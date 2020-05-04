@@ -60,16 +60,7 @@ for eachfile in glob.glob("*.pdf"):
     d['Text'].append(str(text))  
 
 
-df = pd.DataFrame(d)
-df.to_csv(r'SlidestoText.csv', index = False)
-
-
-import keras
-from keras.preprocessing.text import text_to_word_sequence
-# define the document
-test_text = 'Tu mama es mi perra'
-# tokenize the document
-result = text_to_word_sequence(test_text)
-print(result)
+df = pd.DataFrame(d) #Creating dataframe to be used for ML algorithms
+df.to_csv(r'SlidestoText.csv', index = False) # Create the CSV file 
 
 
